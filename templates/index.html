@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Home</title>
+{% endblock title %}
+
+ 
+ {% block contents %}
+      <h1>Hello {{name}} </h1>
+      <h1>List of posts</h1>
+
+      {% for post in posts %}
+       <div class="post">
+        <h2>{{ post.id }},  {{ post.title }}</h2>
+        <p>By <b>{{ post.author }}</b></p>    
+        <img class="image" src="{% static 'images/fun.jpg' %}" alt="photo">        
+       </div>
+       {% endfor %}
+    
+
+ {% endblock contents %}
+    
+    
+    
+   

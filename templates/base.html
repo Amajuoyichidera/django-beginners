@@ -1,0 +1,33 @@
+{% load static %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{% block title %}
+    <title>Django template</title>
+{% endblock title %}
+</head>
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+<body>
+<header>
+    <a href="{% url 'posts_home' %}">Home</a>
+    <a href="{% url 'sign_up' %}">Sign Up</a>
+    <a href="{% url 'login' %}">Log In</a>
+    <a href="{% url 'logout' %}">Log Out</a>
+    <a href="{% url 'all_posts' %}">All_Post</a>
+</header>
+ 
+
+{% block contents %}
+    
+{% endblock contents %}
+    
+
+<footer>
+    &copy; Django Beginners 2023
+</footer>
+    
+<script src="{% static 'js/index.js' %}">
+
+</script>
+</body>
+</html>
